@@ -27,8 +27,8 @@ var browserSync = require('browser-sync').create(),
 var path = {
     dist: { //Тут мы укажем куда складывать готовые после сборки файлы
         pug: 'dist/',
-        js: 'dist/js/',
-        css: 'dist/css/',
+        js: 'app/js/',
+        css: 'app/css/',
         img: 'dist/img/',
         fonts: 'dist/fonts'
     },
