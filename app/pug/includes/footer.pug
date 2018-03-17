@@ -1,2 +1,39 @@
+mixin menu(data)
+	ul.footer-nav__list
+	each item in data.menu
+		li.footer-nav__item
+			a.footer-nav__link(href=item.href)= item.text
+		
 footer.page__footer.footer
-	h2 Footer
+	.footer__container.container
+		.footer__body
+			.footer__logo-contact
+				.footer__logo
+					.logo
+						img.picture.logo__picture(src='img/logo.svg')
+					.description
+						h1.description__title ТОРГОВО-ПРОМИСЛОВА ПАЛАТА УКРАЇНИ
+						span.description__manufacturer Представництво в Італії
+						span.description__detaile (Ломбардія, П’ємонт)
+				.footer__contact
+			.footer__map
+			.footer__nav-social
+				.footer-nav
+					.footer-nav__title
+					+menu({'menu':[{
+						'href': 'about.html',
+						'text': 'Про палату'	
+					},{
+						'href': 'srvices.html',
+						'text': 'Послуги'		
+					},{
+						'href': 'events.html',
+						'text': 'ПодіЇ'		
+					},{
+						'href': 'contacts.html',
+						'text': 'Контакти'		
+					}]})
+				.footer__socials
+					a.social(href="facebook.com") 
+						i.fab.fa-facebook-f
+		.footer__creator

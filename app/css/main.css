@@ -37,7 +37,8 @@
   font-weight: 900; }
 
 .container {
-  max-width: 1920px;
+  max-width: 1200px;
+  padding: 0 15px;
   margin: 0 auto; }
 
 .container--min {

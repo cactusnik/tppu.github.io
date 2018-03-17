@@ -1,4 +1,115 @@
 extends ../layouts/layout.pug
-
+mixin slider(data)
+	a.slider__item(href="javascript:void(0);")
+		img.picture(src=data)
+		
+mixin news(data)
+	article.news
+	each post in data.news
+		a.news__link(href='javascript:void(0);')
+			.news__picture
+				img.picture(src=post.src)
+			.news__content
+				p.news__title= post.title
+				span.news__data= post.data
+				
+mixin services(data)
+	each service in data.services
+		a.service(href='javascript:void(0);')
+			.service__icon
+				img.picture(src=service.src)
+			span.service__title= service.title
+				
 block page-content
-	h2 Main
+	section.slider.container
+		+slider('img/slider.jpg')
+		+slider('img/slider.jpg')
+		+slider('img/slider.jpg')
+	section.top-news
+		.top-news__container.container
+			+news({'news':[{
+				'src': '/img/news1.jpg',
+				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+				'data': 'листопад 2017 року'
+			},{
+				'src': '/img/news1.jpg',
+				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+				'data': 'листопад 2017 року'
+			},{
+				'src': '/img/news1.jpg',
+				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+				'data': 'листопад 2017 року'
+			}
+			]})
+
+	section.services
+		.title ПОСЛУГИ
+		.services__container.container
+			+services({'services':[{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			},{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			},{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			},{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			},{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			},{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			},{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			},{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			},{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			},{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			},{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			},{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			}
+			]})
+
+	serction.section-news
+		h2.title Новини
+		.section-news__container.container
+			+news({'news':[{
+				'src': '/img/news1.jpg',
+				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+				'data': 'листопад 2017 року'
+			},{
+				'src': '/img/news1.jpg',
+				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+				'data': 'листопад 2017 року'
+			},{
+				'src': '/img/news1.jpg',
+				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+				'data': 'листопад 2017 року'
+			},{
+				'src': '/img/news1.jpg',
+				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+				'data': 'листопад 2017 року'
+			},{
+				'src': '/img/news1.jpg',
+				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+				'data': 'листопад 2017 року'
+			},{
+				'src': '/img/news1.jpg',
+				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+				'data': 'листопад 2017 року'
+			}
+			]})
