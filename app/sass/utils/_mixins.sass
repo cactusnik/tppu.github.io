@@ -1,0 +1,161 @@
+@mixin transition($default-transition)
+	-webkit-transition: $default-transition
+	-moz-transition: $default-transition
+	-ms-transition: $default-transition
+	-o-transition: $default-transition
+	transition: $default-transition
+
+@mixin last-child()
+	&:last-of-type
+	@content
+
+
+@mixin radius($border-radius)
+	-webkit-border-radius: $border-radius
+	-moz-border-radius: $border-radius
+	border-radius: $border-radius
+
+
+@mixin rotate($rotate)
+	-webkit-transform: rotate($rotate)
+	-moz-transform: rotate($rotate)
+	-ms-transform: rotate($rotate)
+	-o-transform: rotate($rotate)
+	transform: rotate($rotate)
+
+
+@mixin scale($scale)
+	-webkit-transform: scale($scale)
+	-moz-transform: scale($scale)
+	-ms-transform: scale($scale)
+	-o-transform: scale($scale)
+	transform: scale($scale)
+
+
+@mixin shadow($shadow)
+	-webkit-box-shadow: ($shadow)
+	-moz-box-shadow: ($shadow)
+	-ms-box-shadow: ($shadow)
+	-o-box-shadow: ($shadow)
+	box-shadow: ($shadow)
+
+
+@mixin gradient($aside,$aside-invert,$color1,$color2)
+	background: -moz-linear-gradient($aside, $color1 0%, $color2 100%)
+	background: -webkit-linear-gradient($aside, $color1 0%,$color2 100%)
+	background: -o-linear-gradient($aside, $color1 0%,$color2 100%)
+	background: -ms-linear-gradient($aside, $color1 0%,$color2 100%)
+	background: linear-gradient(to $aside-invert, $color1 0%,$color2 100%)
+
+
+@mixin center_transform()
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+	-moz-transform: translate(-50%, -50%)
+	-webkit-transform: translate(-50%, -50%)
+	-ms-transform: translate(-50%, -50%)
+	-o-transform: translate(-50%, -50%)
+
+
+@mixin vertical_center_transform()
+	position: absolute
+	left: 0
+	top: 50%
+	width: 100%
+	transform: translate(0, -50%)
+	-moz-transform: translate(0, -50%)
+	-webkit-transform: translate(0, -50%)
+	-ms-transform: translate(0, -50%)
+	-o-transform: translate(0, -50%)
+
+
+@mixin button($button-bg, $button-border, $button-border-color, $button-pad, $button-size, $button-line-height, $button-radius,$button-color)
+	display: inline-block
+	vertical-align: top
+	padding: 0 $button-pad 0 $button-pad
+	background: $button-bg
+	border: $button-border solid $button-border-color
+	font-size: $button-size
+	line-height: $button-line-height
+	position: relative
+	color: $button-color
+	@include radius($button-radius)
+
+
+@mixin font($font-s, $font-h, $font-c)
+	font-size: $font-s
+	line-height: $font-h
+	color: $font-c
+
+@mixin placeholder-color($color)
+	&::-webkit-input-placeholder /* WebKit browsers */
+		color: $color
+	&:-moz-placeholder /* Mozilla Firefox 4 to 18 */
+		color: $color
+	&::-moz-placeholder /* Mozilla Firefox 19+ */
+		color: $color
+	&:-ms-input-placeholder  /* Internet Explorer 10+ */
+		color: $color
+
+
+
+
+@mixin backgroundimg ($imgpath, $position: center center, $repeat: no-repeat)
+	background:
+		image: url($imgpath)
+		position: $position
+		repeat: $repeat
+
+@mixin clearfix()
+	&
+		*zoom: 1
+	&:before, &:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+
+@mixin keyframe ($animation_name)
+	@-webkit-keyframes $animation_name
+		@content
+	@-moz-keyframes $animation_name
+		@content
+	@-o-keyframes $animation_name
+		@content
+	@keyframes $animation_name
+		@content
+
+@mixin textGlitch ($name, $intensity, $textColor, $backgroundnew, $highlightColor1, $highlightColor2, $width, $height)
+	color: $textColor
+	position: relative
+	$steps: $intensity
+
+	// Ensure the @keyframes are generated at the root level
+	@at-root
+		// We need two different ones
+		@for $i from 1 through 2
+			@keyframes #{$name}-anim-#{$i}
+				@for $i from 0 through $steps
+					#{percentage($i*(1/$steps))}
+						clip: rect(random($height)+px, $width+rem, random($height)+rem,0)
+	&:before,
+	&:after
+		content: attr(data-text)
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		background: $backgroundnew
+		clip: rect(0, 0, 0, 0)
+
+	&:after
+		left: 2px
+		text-shadow: -1px 0 $highlightColor1
+		animation: #{$name}-anim-1 2s infinite linear alternate-reverse
+
+	&:before
+		left: -2px
+		text-shadow: 2px 0 $highlightColor2
+		animation: #{$name}-anim-2 3s infinite linear alternate-reverse

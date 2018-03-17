@@ -1,0 +1,9 @@
+# folder node_modules
+node_modules/
+npm-debug*
+*.psd
+*.pdf
+*.log
+*.ai
+*.atom*
+app/css*.css

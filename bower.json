@@ -1,0 +1,25 @@
+{
+  "name": "start-project",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "cactusnik <terechovalexanderr@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "app/vendor"
+  ],
+  "devDependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.0",
+    "font-awesome": "^5.0.6",
+    "slick-carousel": "^1.8.1"
+  }
+}
