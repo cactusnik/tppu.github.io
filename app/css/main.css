@@ -51,6 +51,24 @@
     font-size: 1.5rem;
     line-height: 2rem; }
 
+.burger {
+  width: 43px;
+  height: 43px;
+  background-color: #60427D;
+  border-radius: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .burger .fas {
+    color: #fff;
+    font-size: 2.5rem; }
+
 .creator {
   color: #fff; }
   .creator__link {
@@ -154,7 +172,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 23px 0; }
+  padding: 23px 0;
+  padding-left: 15px; }
+
+.header__icon-contact {
+  padding-right: 15px; }
 
 .header__icons {
   display: -webkit-box;
@@ -198,7 +220,65 @@
   font-style: normal; }
 
 .header__nav {
-  background-color: #E6E6E6; }
+  background-color: #E6E6E6;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%; }
+
+.header__mobile {
+  background-color: #E6E6E6;
+  display: none; }
+
+@media screen and (max-width: 768px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+    .header__icons {
+      display: none; }
+    .header__nav {
+      display: none;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; }
+    .header__icon-contact {
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3;
+      width: 100%; }
+    .header__top {
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3;
+      margin: 0;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
+      .header__top .header__logo-description {
+        display: none; }
+    .header__logo-description, .header__btn-menu {
+      background-color: #E6E6E6; }
+    .header__mobile {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding-right: 15px;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; } }
 
 .languages {
   list-style: none;
@@ -258,6 +338,49 @@
     font-size: 1.2rem; }
   .nav__submenu {
     display: none; }
+  @media screen and (max-width: 768px) {
+    .nav {
+      height: auto; }
+      .nav__list {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch; }
+      .nav__link {
+        display: block;
+        padding: 5px 0;
+        position: relative; }
+      .nav__item {
+        margin-right: 0;
+        border-bottom: 1px solid #4D4D4D;
+        text-align: center; }
+        .nav__item:first-child {
+          border-top: 1px solid #4D4D4D; }
+        .nav__item--active .nav__link:after {
+          -webkit-transform: rotate(90deg);
+                  transform: rotate(90deg); }
+        .nav__item--dropdown .nav__link:after {
+          /* >> Symbol you want to use: */
+          content: "\f056";
+          /* >> Name of the FA free font (mandatory)
+                       - 'Font Awesome 5 Free' for Regular and Solid symbols;
+                       - 'Font Awesome 5 Brand' for Brands symbols. */
+          font-family: 'Font Awesome 5 Free';
+          /* >> Weight of the font (mandatory)
+                       - 400 for Regular and Brands symbols;
+                       - 900 for Solid symbols. */
+          font-weight: 900;
+          /* >> Optional styling: */
+          display: inline-block;
+          position: absolute;
+          right: 35%;
+          color: #60427D;
+          -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+          /* ... */ } }
 
 .news {
   background-color: #E6E6E6;
@@ -403,6 +526,17 @@
   border-radius: 50%;
   cursor: pointer; }
 
+.submenu {
+  padding: 0;
+  background-color: #60427D;
+  margin: 0 5%;
+  list-style: none; }
+  .submenu__item {
+    padding: 5px 0; }
+  .submenu__link {
+    color: #fff;
+    text-decoration: none; }
+
 .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -460,3 +594,8 @@
 @media screen and (max-width: 1400px) {
   html {
     font-size: 80%; } }
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px; } }

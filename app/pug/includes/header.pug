@@ -11,7 +11,7 @@ mixin main-menu-submenu(data)
 				a.submenu__link(href=item.url)= item.title
 			
 mixin main-menu(data)
-	nav.header__nav.nav&attributes(attributes)
+	nav.nav&attributes(attributes)
 		ul.nav__list
 			each item in data.menu
 				- var itemClasses = ['nav__item']
@@ -43,43 +43,52 @@ header.page__header.header
 					a.number(href="tel:393319899647") +39 (331) 989 96 47
 					a.number(href="tel:393319899647") +39 (331) 989 96 47
 				span.header__address Viale Certosa 138, Milano (MI), Italia, 20156
+	.header__mobile
+		.header__logo-description
+			.logo
+				img.picture.logo__picture(src='img/logo.png' alt='logo')
+			.description
+				h1.description__title ТОРГОВО-ПРОМИСЛОВА ПАЛАТА УКРАЇНИ
+				span.description__manufacturer Представництво в Італії
+				span.description__detaile (Ломбардія, П’ємонт)
+		.burger
+			i.fas.fa-bars
 	.header__nav
-		.container
-			+main-menu({
-						"menu": [{
-								"title": "ПРО ПАЛАТУ",
-								"url": "/about.html",
-								"submenu": false
-							},
-							{
-								"title": "ПОСЛУГИ",
-								"url": "services.html",
-								"submenu": false
-							},
-							{
-								"title": "ПОДІЇ",
-								"url": "events.html",
-								"submenu": [	
-									{
-										"title": "Архитектура",
-										"url": "services-inner.html"
-									},
-									{
-										"title": "Дизайн",
-										"url": "url3"
-									}
-								]
-							},
-							{
-								"title": "НОВИНИ",
-								"url": "news.html",
-								"submenu": false
-							},
-							{
-								"title": "КОНТАКТИ",
-								"url": "contacts.html",
-								"submenu": false
-							}
-							
-						]
-					})
+		+main-menu({
+					"menu": [{
+							"title": "ПРО ПАЛАТУ",
+							"url": "/about.html",
+							"submenu": false
+						},
+						{
+							"title": "ПОСЛУГИ",
+							"url": "services.html",
+							"submenu": false
+						},
+						{
+							"title": "ПОДІЇ",
+							"url": "events.html",
+							"submenu": [	
+								{
+									"title": "Архитектура",
+									"url": "services-inner.html"
+								},
+								{
+									"title": "Дизайн",
+									"url": "url3"
+								}
+							]
+						},
+						{
+							"title": "НОВИНИ",
+							"url": "news.html",
+							"submenu": false
+						},
+						{
+							"title": "КОНТАКТИ",
+							"url": "contacts.html",
+							"submenu": false
+						}
+						
+					]
+				})
