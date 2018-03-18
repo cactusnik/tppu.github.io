@@ -6,18 +6,19 @@ mixin title(data)
 		a.title__more(href="javascript:void(0);") ...
 
 mixin slider(data)
-	a.slider__item(href="javascript:void(0);")
-		img.picture.picture--full-width(src=data)
+	a.slider__item(href='#')
+		img(src=data).picture.picture--full-width
 		
 mixin news(data)
 	each post in data.news
 		article.news
 			a.news__link(href='javascript:void(0);')
 				.news__picture
-					img.picture(src=post.src)
+					img.picture.picture--full(src=post.src)
 				.news__content
 					p.news__title= post.title
 					span.news__data= post.data
+					a.news__more(href='javascript:void(0);') text
 				
 mixin services(data)
 	each service in data.services
@@ -36,7 +37,7 @@ block page-content
 		.top-news__container
 			+news({'news':[{
 				'src': '/img/news1.jpg',
-				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+				'title': 'Відкриття офісу представника Торгово-промислової палати України в Мілані',
 				'data': 'листопад 2017 року'
 			},{
 				'src': '/img/news1.jpg',

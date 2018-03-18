@@ -3,9 +3,22 @@ html
 	include ../includes/head.pug
 	body.page
 		include ../includes/header.pug
-		menu.page__menu
+		main.page__menu
 			block page-content
 		include ../includes/footer.pug
 		script(src='js/vendor.min.js')
 		script(src='js/common.min.js')
+		script
+			| function initMap() {
+			| 	var uluru = {lat: -25.363, lng: 131.044};
+			| 	var map = new google.maps.Map(document.getElementById('map'), {
+			| 		zoom: 15,
+			| 		center: uluru
+			| 	});
+			| 	var marker = new google.maps.Marker({
+			| 		position: uluru,
+			| 		map: map
+			| 	});
+			| }
+		script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCMp9zI-51Z00IBI1feV7NglctxPkXGKSk&callback=initMap' async='' defer='')
 	
