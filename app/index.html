@@ -23,10 +23,11 @@
         <div class="header__icon-contact">
           <div class="header__icons">
             <div class="header__socials"><a class="social" href="facebook.com"> <i class="fab fa-facebook-f"></i></a></div>
-                <ul class="languages header__languages"></ul>
-                <li class="languages__item"><a class="languages__link" hrf="javascript:void(0);">ua</a></li>
-                <li class="languages__item"><a class="languages__link" hrf="javascript:void(0);">it</a></li>
-                <li class="languages__item"><a class="languages__link" hrf="javascript:void(0);">en</a></li>
+                <ul class="languages header__languages">
+                  <li class="languages__item"><a class="languages__link" hrf="javascript:void(0);">ua</a></li>
+                  <li class="languages__item"><a class="languages__link" hrf="javascript:void(0);">it</a></li>
+                  <li class="languages__item"><a class="languages__link" hrf="javascript:void(0);">en</a></li>
+                </ul>
           </div>
           <div class="header__contact">
             <div class="header__numbers"><a class="number" href="tel:393319899647">+39 (331) 989 96 47</a><a class="number" href="tel:393319899647">+39 (331) 989 96 47</a></div>
@@ -58,72 +59,116 @@
       </div>
     </header>
     <menu class="page__menu">
-      <section class="slider container"><a class="slider__item" href="javascript:void(0);"><img class="picture" src="img/slider.jpg"/></a><a class="slider__item" href="javascript:void(0);"><img class="picture" src="img/slider.jpg"/></a><a class="slider__item" href="javascript:void(0);"><img class="picture" src="img/slider.jpg"/></a>
+      <section class="slider container"><a class="slider__item" href="javascript:void(0);"><img class="picture picture--full-width" src="img/slider.jpg"/></a><a class="slider__item" href="javascript:void(0);"><img class="picture picture--full-width" src="img/slider.jpg"/></a><a class="slider__item" href="javascript:void(0);"><img class="picture picture--full-width" src="img/slider.jpg"/></a>
       </section>
-      <section class="top-news">
-        <div class="top-news__container container">
-          <article class="news"></article><a class="news__link" href="javascript:void(0);">
-            <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
-            <div class="news__content">
-              <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
-            </div></a><a class="news__link" href="javascript:void(0);">
-            <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
-            <div class="news__content">
-              <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
-            </div></a><a class="news__link" href="javascript:void(0);">
-            <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
-            <div class="news__content">
-              <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
+      <section class="top-news container">
+        <div class="top-news__container">
+          <article class="news"><a class="news__link" href="javascript:void(0);">
+              <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
+              <div class="news__content">
+                <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
+              </div></a></article>
+          <article class="news"><a class="news__link" href="javascript:void(0);">
+              <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
+              <div class="news__content">
+                <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
+              </div></a></article>
+          <article class="news"><a class="news__link" href="javascript:void(0);">
+              <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
+              <div class="news__content">
+                <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
+              </div></a></article>
+        </div>
+      </section>
+      <section class="services container">
+        <div class="title">
+          <h2 class="title__text">ПОСЛУГИ</h2><a class="title__more" href="javascript:void(0);">...</a>
+        </div>
+        <div class="services__container"><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title">ОРГАНІЗАЦІЯ МІЖНАРОДНОГО ЕКОНОМІЧНОГО СПІВРОБІТНИЦТВА</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
+            </div></a><a class="service" href="javascript:void(0);">
+            <div class="service__body">
+              <div class="service__icon"><img class="picture picture--full" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span>
             </div></a>
         </div>
       </section>
-      <section class="services">
-        <div class="title">ПОСЛУГИ</div>
-        <div class="services__container container"><a class="service" href="javascript:void(0);">
-            <div class="service__icon"><img class="picture" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span></a><a class="service" href="javascript:void(0);">
-            <div class="service__icon"><img class="picture" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span></a><a class="service" href="javascript:void(0);">
-            <div class="service__icon"><img class="picture" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span></a><a class="service" href="javascript:void(0);">
-            <div class="service__icon"><img class="picture" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span></a><a class="service" href="javascript:void(0);">
-            <div class="service__icon"><img class="picture" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span></a><a class="service" href="javascript:void(0);">
-            <div class="service__icon"><img class="picture" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span></a><a class="service" href="javascript:void(0);">
-            <div class="service__icon"><img class="picture" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span></a><a class="service" href="javascript:void(0);">
-            <div class="service__icon"><img class="picture" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span></a><a class="service" href="javascript:void(0);">
-            <div class="service__icon"><img class="picture" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span></a><a class="service" href="javascript:void(0);">
-            <div class="service__icon"><img class="picture" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span></a><a class="service" href="javascript:void(0);">
-            <div class="service__icon"><img class="picture" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span></a><a class="service" href="javascript:void(0);">
-            <div class="service__icon"><img class="picture" src="img/service1.png"/></div><span class="service__title"> Lorem ipsum dolor sit amet.</span></a>
+      <section class="section-news container">
+        <div class="title">
+          <h2 class="title__text">Новини</h2><a class="title__more" href="javascript:void(0);">...</a>
+        </div>
+        <div class="section-news__container">
+          <article class="news"><a class="news__link" href="javascript:void(0);">
+              <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
+              <div class="news__content">
+                <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
+              </div></a></article>
+          <article class="news"><a class="news__link" href="javascript:void(0);">
+              <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
+              <div class="news__content">
+                <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
+              </div></a></article>
+          <article class="news"><a class="news__link" href="javascript:void(0);">
+              <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
+              <div class="news__content">
+                <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
+              </div></a></article>
+          <article class="news"><a class="news__link" href="javascript:void(0);">
+              <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
+              <div class="news__content">
+                <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
+              </div></a></article>
+          <article class="news"><a class="news__link" href="javascript:void(0);">
+              <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
+              <div class="news__content">
+                <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
+              </div></a></article>
+          <article class="news"><a class="news__link" href="javascript:void(0);">
+              <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
+              <div class="news__content">
+                <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
+              </div></a></article>
         </div>
       </section>
-      <serction class="section-news">
-        <h2 class="title">Новини</h2>
-        <div class="section-news__container container">
-          <article class="news"></article><a class="news__link" href="javascript:void(0);">
-            <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
-            <div class="news__content">
-              <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
-            </div></a><a class="news__link" href="javascript:void(0);">
-            <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
-            <div class="news__content">
-              <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
-            </div></a><a class="news__link" href="javascript:void(0);">
-            <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
-            <div class="news__content">
-              <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
-            </div></a><a class="news__link" href="javascript:void(0);">
-            <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
-            <div class="news__content">
-              <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
-            </div></a><a class="news__link" href="javascript:void(0);">
-            <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
-            <div class="news__content">
-              <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
-            </div></a><a class="news__link" href="javascript:void(0);">
-            <div class="news__picture"><img class="picture" src="/img/news1.jpg"/></div>
-            <div class="news__content">
-              <p class="news__title"> Lorem ipsum dolor sit amet, consectetur adipisicing.</p><span class="news__data">листопад 2017 року</span>
-            </div></a>
-        </div>
-      </serction>
     </menu>
     <footer class="page__footer footer">
       <div class="footer__container container">

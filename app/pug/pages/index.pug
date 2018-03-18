@@ -1,32 +1,39 @@
 extends ../layouts/layout.pug
+
+mixin title(data)
+	.title
+		h2.title__text= data
+		a.title__more(href="javascript:void(0);") ...
+
 mixin slider(data)
 	a.slider__item(href="javascript:void(0);")
-		img.picture(src=data)
+		img.picture.picture--full-width(src=data)
 		
 mixin news(data)
-	article.news
 	each post in data.news
-		a.news__link(href='javascript:void(0);')
-			.news__picture
-				img.picture(src=post.src)
-			.news__content
-				p.news__title= post.title
-				span.news__data= post.data
+		article.news
+			a.news__link(href='javascript:void(0);')
+				.news__picture
+					img.picture(src=post.src)
+				.news__content
+					p.news__title= post.title
+					span.news__data= post.data
 				
 mixin services(data)
 	each service in data.services
 		a.service(href='javascript:void(0);')
-			.service__icon
-				img.picture(src=service.src)
-			span.service__title= service.title
+			.service__body
+				.service__icon
+					img.picture.picture--full(src=service.src)
+				span.service__title= service.title
 				
 block page-content
 	section.slider.container
 		+slider('img/slider.jpg')
 		+slider('img/slider.jpg')
 		+slider('img/slider.jpg')
-	section.top-news
-		.top-news__container.container
+	section.top-news.container
+		.top-news__container
 			+news({'news':[{
 				'src': '/img/news1.jpg',
 				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
@@ -42,10 +49,19 @@ block page-content
 			}
 			]})
 
-	section.services
-		.title ПОСЛУГИ
-		.services__container.container
+	section.services.container
+		+title('ПОСЛУГИ')
+		.services__container
 			+services({'services':[{
+				'src': 'img/service1.png',
+				'title': 'ОРГАНІЗАЦІЯ МІЖНАРОДНОГО ЕКОНОМІЧНОГО СПІВРОБІТНИЦТВА'
+			},{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			},{
+				'src': 'img/service1.png',
+				'title': ' Lorem ipsum dolor sit amet.'
+			},{
 				'src': 'img/service1.png',
 				'title': ' Lorem ipsum dolor sit amet.'
 			},{
@@ -84,9 +100,9 @@ block page-content
 			}
 			]})
 
-	serction.section-news
-		h2.title Новини
-		.section-news__container.container
+	section.section-news.container
+		+title('Новини')
+		.section-news__container
 			+news({'news':[{
 				'src': '/img/news1.jpg',
 				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',

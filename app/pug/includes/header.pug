@@ -1,8 +1,8 @@
 mixin languages(data)
 	ul.languages.header__languages
-	each lang in data.languages
-		li.languages__item
-			a.languages__link(hrf='javascript:void(0);')= lang
+		each lang in data.languages
+			li.languages__item
+				a.languages__link(hrf='javascript:void(0);')= lang
 			
 mixin main-menu-submenu(data)
 	ul.nav__submenu.submenu&attributes(attributes)
