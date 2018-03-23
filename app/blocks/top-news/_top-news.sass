@@ -7,3 +7,16 @@
 
     .news
       flex: 0 0 33.33%
+
+  @media screen and (max-width: 992px)
+    .news
+      flex: 0 0 50%
+
+  @media screen and (max-width: 768px)
+
+    &__container
+      flex-wrap: wrap
+      margin-left: -15px
+      margin-right: -15px
+      .news
+        flex: 0 0 100%

@@ -7,18 +7,17 @@ mixin title(data)
 
 mixin slider(data)
 	a.slider__item(href='#')
-		img(src=data).picture.picture--full-width
+		img(src=data).picture.picture--slider
 		
 mixin news(data)
 	each post in data.news
-		article.news
-			a.news__link(href='javascript:void(0);')
-				.news__picture
-					img.picture.picture--full(src=post.src)
-				.news__content
-					p.news__title= post.title
-					span.news__data= post.data
-					a.news__more(href='javascript:void(0);') text
+		a.news(href='javascript:void(0);')
+			.news__picture
+				img.picture.picture--full(src=post.src)
+			.news__content
+				p.news__title= post.title
+				span.news__data= post.data
+				.news__more Докладніше...
 				
 mixin services(data)
 	each service in data.services
@@ -29,27 +28,31 @@ mixin services(data)
 				span.service__title= service.title
 				
 block page-content
+	<!-- start section slider-->
 	section.slider.container
 		+slider('img/slider.jpg')
 		+slider('img/slider.jpg')
 		+slider('img/slider.jpg')
+	<!-- end section slider-->
+	<!-- start section top-news-->
 	section.top-news.container
 		.top-news__container
 			+news({'news':[{
-				'src': '/img/news1.jpg',
+				'src': 'img/news1.jpg',
 				'title': 'Відкриття офісу представника Торгово-промислової палати України в Мілані',
 				'data': 'листопад 2017 року'
 			},{
-				'src': '/img/news1.jpg',
+				'src': 'img/news1.jpg',
 				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
 				'data': 'листопад 2017 року'
 			},{
-				'src': '/img/news1.jpg',
+				'src': 'img/news1.jpg',
 				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
 				'data': 'листопад 2017 року'
 			}
 			]})
-
+	<!-- end section top-news-->
+	<!-- start section services-->
 	section.services.container
 		+title('ПОСЛУГИ')
 		.services__container
@@ -100,7 +103,9 @@ block page-content
 				'title': ' Lorem ipsum dolor sit amet.'
 			}
 			]})
-
+			a.more(href="javascript:void(0);") Усі послуги
+	<!-- end section services-->
+	<!-- start section section-news-->
 	section.section-news.container
 		+title('Новини')
 		.section-news__container
@@ -130,3 +135,5 @@ block page-content
 				'data': 'листопад 2017 року'
 			}
 			]})
+			a.more(href="javascript:void(0);") Усі новини
+		<!-- end section section-news-->

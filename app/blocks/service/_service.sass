@@ -20,3 +20,21 @@
     text-transform: uppercase
     font-size: 0.85rem
     color: $text-color
+
+  @media screen and (max-width: 1200px)
+    margin: 0 5px
+    &:nth-child(5n + 1)
+      margin-left: 5px
+    &:nth-child(5n)
+      margin-right: 5px
+
+  @media screen and (max-width: 768px)
+    flex: 0 0 47%
+    margin: 0
+    display: none
+    margin-bottom: 10px
+    &__icon
+      height: auto
+
+    &:nth-child(-n + 10)
+      display: inline-block

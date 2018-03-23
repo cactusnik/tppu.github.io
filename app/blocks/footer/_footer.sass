@@ -2,30 +2,43 @@
   background-color: $accent
   padding-top: 42px
   padding-bottom: 15px
+
   &__body
-    display: flex
-    justify-content: space-between
     margin-bottom: 55px
+    @include clearfix()
 
   &__logo-contact
-    width: 380px
+    width: 32.5%
+    float: left
 
   &__map
-    width: 538px
+    width: 46%
     min-height: 250px
+    float: right
+    margin-right: 85px
 
   &__nav-social
-    width: 118px
+    width: 10%
+    float: right
     display: flex
     flex-direction: column
     justify-content: space-between
 
   &__socials
+
     .fab
       color: #fff
       font-size: 3rem
       &:hover
         color: #B3B3B3
+
+    &--mobile
+      display: none
+
+  &__address
+    float: left
+    &--mobile
+      display: none
 
   &__logo
     display: flex
@@ -34,3 +47,68 @@
   &__creator
     display: flex
     justify-content: center
+
+
+
+  @media screen and (max-width: 1200px)
+
+    &__map
+      width: 40%
+      margin-right: 7%
+
+  @media screen and (max-width: 992px)
+
+    &__body
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+    &__map, &__logo-contact, &__address, &__nav-social
+      float: none
+
+    &__logo-contact
+      flex: 44%
+
+    &__nav-social
+      order: 3
+      flex: 44%
+
+    &__address
+      order: 2
+      flex: 54%
+
+    &__map
+      flex: 54%
+      order: 4
+      margin-right: 0
+
+  @media screen and (max-width: 768px)
+    padding-top: 1rem
+
+    &__body
+      flex-direction: column
+
+    &__map, &__logo-contact, &__address, &__nav-social
+      flex: 100%
+      width: 100%
+
+    &__logo-contact
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+    &__logo
+      margin-bottom: 0
+
+    &__nav-social
+      order: 4
+      flex-direction: row
+      justify-content: space-between
+
+    &__address
+      order: 3
+      align-items: center
+      margin: 2rem 0
+
+    &__map
+      order: 2

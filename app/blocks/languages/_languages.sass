@@ -7,6 +7,9 @@
     margin-right: 0.625rem
     &:last-child
       margin-right: 0
+    &--footer
+      margin-right: 0
+      margin-bottom: 0.625rem
 
   &__link
     width: 30px
@@ -24,3 +27,12 @@
 
     &:hover
       color: $accent
+
+  &--mobile
+    display: flex
+    flex-direction: column
+    padding: 0
+    padding-left: 0.5rem
+    display: none
+    @media screen and (max-width: 768px)
+      display: flex
