@@ -39,8 +39,10 @@
     font-size: 1.5rem;
     line-height: 2rem; }
   @media screen and (max-width: 480px) {
-    .address__item {
-      font-size: 1.2rem; } }
+    .address {
+      text-align: center; }
+      .address__item {
+        font-size: 1.2rem; } }
 
 .burger {
   min-width: 43px;
