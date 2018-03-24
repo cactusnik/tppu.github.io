@@ -4,6 +4,7 @@
   box-sizing: border-box
   display: flex
   position: relative
+  text-decoration: none
 
   &__picture
     max-width: 150px
@@ -14,14 +15,18 @@
 
   &__title
     margin: 0
-    font-size: 1.2rem
+    font-size: 1.1rem
     line-height: 1.1rem
     margin-bottom: 1rem
+    font-family: 'my-roboto'
+    font-weight: 400
     color: $text-color
 
   &__data
     color: $text-color
-    font-size: 1.2rem
+    font-size: 1.1rem
+    font-family: 'my-roboto'
+    font-weight: 300
 
   &__content
     position: relative
@@ -31,9 +36,20 @@
     font-size: 0.6rem
     position: absolute
     bottom: 0
-    right: 0
+    right: 1rem
     text-decoration: none
     color: $accent
+    display: none
+    font-family: 'my-roboto'
+    font-weight: 300
+
+  &__dots
+    position: absolute
+    bottom: 0
+    color: #fff
+    right: 3rem
+    font-size: 2rem
+
 
   @media screen and (max-width: 992px)
     &:last-child
@@ -42,6 +58,14 @@
   @media screen and (max-width: 768px)
     &:last-child
       display: flex
+
+    &__more
+      display: block
+
+    &__dots
+      right: 0
+      font-size: 1rem
+      color: $accent
 
   @media screen and (max-width: 480px)
 
