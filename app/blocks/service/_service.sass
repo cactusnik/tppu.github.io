@@ -33,7 +33,6 @@
   @media screen and (max-width: 768px)
     flex: 0 0 32%
     margin: 0
-    display: none
     margin-bottom: 10px
     &__icon
       height: auto
@@ -43,12 +42,16 @@
     &:nth-child(5n)
       margin-right: 0
 
-    &:nth-child(-n + 12)
-      display: inline-block
+    &--main
+      display: none
+      &:nth-child(-n + 12)
+        display: inline-block
 
   @media screen and (max-width: 480px)
     flex: 0 0 47%
-    display: none
-    
-    &:nth-child(-n + 10)
-      display: inline-block
+
+
+    &--main
+      display: none
+      &:nth-child(-n + 10)
+        display: inline-block

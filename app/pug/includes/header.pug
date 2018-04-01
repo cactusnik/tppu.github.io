@@ -25,7 +25,7 @@ mixin main-menu(data)
 
 header.page__header.header
 	.header__top.container
-		.header__logo-description
+		a.header__logo-description(href='/')
 			.logo
 				img.picture.picture--logo(src='img/logo.png' alt='logo')
 			.description
@@ -44,7 +44,7 @@ header.page__header.header
 					a.number(href="tel:393319899647") +39 (331) 989 96 47
 				span.header__address Viale Certosa 138, Milano (MI), Italia, 20156
 	.header__mobile
-		.header__logo-description
+		a.header__logo-description(href='/')
 			.logo
 				img.picture.picture--logo(src='img/logo.png' alt='logo')
 			.description
@@ -58,7 +58,16 @@ header.page__header.header
 					"menu": [{
 							"title": "ПРО ПАЛАТУ",
 							"url": "/about.html",
-							"submenu": false
+							"submenu": [	
+								{
+									"title": "МІСІЯ, БАЧЕННЯ, ЦІННОСТІ",
+									"url": "about.html"
+								},
+								{
+									"title": "Керівництво",
+									"url": "leader.html"
+								}
+							]
 						},
 						{
 							"title": "ПОСЛУГИ",

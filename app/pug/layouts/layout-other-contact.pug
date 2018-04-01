@@ -1,0 +1,43 @@
+doctype html
+html
+	include ../includes/head.pug
+	body.page
+		include ../includes/header.pug
+		mixin breadcrum(items)
+			.breadcrumb
+				ul.breadcrumb__list.container
+					each item in items
+						li.breadcrumb__item
+							a(href="javascript:void(0);" title=item).breadcrumb__link= item
+		menu.page__menu
+			block breadcrumbs
+				-let list = ['Главная'];
+				
+			
+			+breadcrum(list)
+			block page-contact
+		include ../includes/footer.pug
+		script(src='js/vendor.min.js')
+		script(src='js/common.min.js')
+		script
+			| function initMap() {
+			| 	var uluru = {lat: -25.363, lng: 131.044};
+			| 	var map = new google.maps.Map(document.getElementById('map'), {
+			| 		zoom: 15,
+			| 		center: uluru
+			| 	});
+			| 	var map2 = new google.maps.Map(document.getElementById('map-contact'), {
+			| 		zoom: 15,
+			| 		center: uluru
+			| 	});
+			| 	var marker = new google.maps.Marker({
+			| 		position: uluru,
+			| 		map: map
+			| 	});
+			| 	var marker2 = new google.maps.Marker({
+			| 		position: uluru,
+			| 		map: map2
+			| 	});
+			| }
+		script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCMp9zI-51Z00IBI1feV7NglctxPkXGKSk&callback=initMap' async='' defer='')
+	

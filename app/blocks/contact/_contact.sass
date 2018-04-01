@@ -1,0 +1,44 @@
+.contact
+
+  &__body
+    display: flex
+    justify-content: space-between
+    align-content: stretch
+
+
+  &__address
+    margin-top: 3rem
+    margin-bottom: 2rem
+
+  &__map
+    min-height: 250px
+    width: 48%
+
+  &__info
+    width: 50%
+
+  &__socials
+    .fab
+      color: $accent
+      font-size: 3rem
+      margin-right: 0.5rem
+
+  @media screen and (max-width: 992px)
+
+    &__description
+      display: none
+
+
+  @media screen and (max-width: 768px)
+
+    &__body
+      flex-direction: column
+
+    &__info, &__map
+      width: 100%
+
+    &__address
+      align-items: center
+
+    &__socials
+      display: none

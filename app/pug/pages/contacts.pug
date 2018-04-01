@@ -1,0 +1,34 @@
+extends ../layouts/layout-other-contact.pug
+
+block breadcrumbs
+  -let list = ['ГОЛОВНА', 'Контакти']
+
+block page-contact
+  .pages-other
+    .pages-other__container.container
+      h2.pages-other__title Контакти
+      .pages-other__body.contact__body
+        .contact__info
+          .contact__description
+            .description.description--contact
+              h3.description__title ТОРГОВО-ПРОМИСЛОВА ПАЛАТА УКРАЇНИ
+              span.description__manufacturer Представництво в Італії (Ломбардія, П’ємонт)
+          address.contact__address.address
+            span.address__item.address__item--black Viale Certosa 138, Мілан (MI), Італія, 20156
+            span.address__item.address__item--black tІталія: Tel.:
+              a.number(href="tel:393319899647") +39 (331) 989 96 47,
+              a.number(href="tel:393319899647") +39 (331) 989 96 47
+            span.address__item.address__item--black Fax:
+              a.number(href="tel:393319899647") +39 (029) 937 10 18
+            span.address__item.address__item--black Україна: Tel.: 
+              a.number(href="tel:393319899647") +38 (066) 561 35 46 
+            span.address__item.address__item--black
+              a.number(href="mailto:info@ucci-studio.it") info@ucci-studio.it
+          .contact__socials
+            a(href="facebook.com")
+              i.fab.fa-facebook-square
+            a(href="facebook.com")
+              i.fab.fa-whatsapp-square
+            a(href="facebook.com")
+              i.fab.fa-facebook-square
+        .contact__map#map-contact

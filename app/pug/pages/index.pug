@@ -11,7 +11,7 @@ mixin slider(data)
 		
 mixin news(data)
 	each post in data.news
-		a.news(href='javascript:void(0);')
+		a.news(href='news-inner.html')
 			.news__picture
 				img.picture.picture--full(src=post.src)
 			.news__content
@@ -22,7 +22,7 @@ mixin news(data)
 				
 mixin services(data)
 	each service in data.services
-		a.service(href='javascript:void(0);')
+		a.service.service--main(href='javascript:void(0);')
 			.service__body
 				.service__icon
 					img.picture.picture--full(src=service.src)
@@ -104,7 +104,7 @@ block page-content
 				'title': ' Lorem ipsum dolor sit amet.'
 			}
 			]})
-			a.more(href="javascript:void(0);") Усі послуги
+			a.more(href="services.html") Усі послуги
 	<!-- end section services-->
 	<!-- start section section-news-->
 	section.section-news.container
@@ -136,5 +136,5 @@ block page-content
 				'data': 'листопад 2017 року'
 			}
 			]})
-			a.more(href="javascript:void(0);") Усі новини
+			a.more(href="news.html") Усі новини
 		<!-- end section section-news-->

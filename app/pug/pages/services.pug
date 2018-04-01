@@ -1,0 +1,69 @@
+extends ../layouts/layout-other.pug
+
+block breadcrumbs
+  -let list = ['ГОЛОВНА', 'Послуги']
+  
+mixin services(data)
+  each service in data.services
+    a.service(href='javascript:void(0);')
+      .service__body
+        .service__icon
+          img.picture.picture--full(src=service.src)
+        span.service__title= service.title
+        
+block page-contact
+  .pages-other
+    .pages-other__container.container
+      h2.pages-other__title Послуги
+      .pages-other__body.pages-other__body--white
+        <!-- start section services-->
+        section.services
+          .services__container
+            +services({'services':[{
+      				'src': 'img/service1.png',
+      				'title': 'ОРГАНІЗАЦІЯ МІЖНАРОДНОГО ЕКОНОМІЧНОГО СПІВРОБІТНИЦТВА'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			},{
+      				'src': 'img/service1.png',
+      				'title': ' Lorem ipsum dolor sit amet.'
+      			}
+      			]})
+            <!-- end section services-->

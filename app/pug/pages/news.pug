@@ -1,0 +1,64 @@
+extends ../layouts/layout-other.pug
+
+block breadcrumbs
+  -let list = ['ГОЛОВНА', 'Новини']
+mixin news(data)
+  each post in data.news
+    a.news(href='news-inner.html')
+      .news__picture
+        img.picture.picture--full(src=post.src)
+      .news__content
+        p.news__title= post.title
+        span.news__data= post.data
+        .news__more Докладніше
+        .news__dots ...
+block page-contact
+  .pages-other
+    .pages-other__container.container
+      h2.pages-other__title Новини
+      .pages-other__body.pages-other__body--white
+        section.section-news
+          .section-news__container
+            +news({'news':[{
+      				'src': 'img/news1.jpg',
+      				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+      				'data': 'листопад 2017 року'
+      			},{
+      				'src': 'img/news1.jpg',
+      				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+      				'data': 'листопад 2017 року'
+      			},{
+      				'src': 'img/news1.jpg',
+      				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+      				'data': 'листопад 2017 року'
+      			},{
+      				'src': 'img/news1.jpg',
+      				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+      				'data': 'листопад 2017 року'
+      			},{
+      				'src': 'img/news1.jpg',
+      				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+      				'data': 'листопад 2017 року'
+      			},{
+      				'src': 'img/news1.jpg',
+      				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+      				'data': 'листопад 2017 року'
+      			},{
+      				'src': 'img/news1.jpg',
+      				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+      				'data': 'листопад 2017 року'
+      			},{
+      				'src': 'img/news1.jpg',
+      				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+      				'data': 'листопад 2017 року'
+      			},{
+      				'src': 'img/news1.jpg',
+      				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+      				'data': 'листопад 2017 року'
+      			},{
+      				'src': 'img/news1.jpg',
+      				'title': ' Lorem ipsum dolor sit amet, consectetur adipisicing.',
+      				'data': 'листопад 2017 року'
+      			}
+      			]})
+            <!-- end section section-news-->
