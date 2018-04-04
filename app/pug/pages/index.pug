@@ -22,7 +22,7 @@ mixin news(data)
 				
 mixin services(data)
 	each service in data.services
-		a.service.service--main(href='javascript:void(0);')
+		a.service.service--main(href='services-inner.html')
 			.service__body
 				.service__icon
 					img.picture.picture--full(src=service.src)

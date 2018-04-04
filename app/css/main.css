@@ -66,14 +66,14 @@
         font-size: 1.2rem; } }
 
 .breadcrumb {
-  height: 50px;
+  min-height: 50px;
   background-color: #fff; }
   .breadcrumb__list {
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 100%;
+    min-height: 50px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -108,8 +108,18 @@
       .breadcrumb__item:last-child .breadcrumb__link:after {
         content: ''; }
   @media screen and (max-width: 1200px) {
-    .breadcrumb__list:after {
-      width: calc(100% - 30px); } }
+    .breadcrumb__list {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .breadcrumb__list:after {
+        width: calc(100% - 30px); } }
+  @media screen and (max-width: 768px) {
+    .breadcrumb {
+      margin-top: 0.5rem; }
+      .breadcrumb__link {
+        font-size: 0.75rem; }
+      .breadcrumb__list:after {
+        bottom: -0.5rem; } }
 
 .burger {
   min-width: 43px;
@@ -586,7 +596,7 @@
   text-align: center; }
 
 .leader__name {
-  font-size: 2rem; }
+  font-size: 1.6rem; }
 
 .leader__about {
   -webkit-box-flex: 7.04;
@@ -604,7 +614,7 @@
           flex-direction: column; }
 
 .leader__info {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center; }
 
 .leader__img {
@@ -615,7 +625,7 @@
   top: -2rem; }
 
 .leader__title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: 'my-roboto';
   font-weight: 500;
   text-transform: uppercase; }
@@ -625,7 +635,7 @@
   padding: 0; }
 
 .leader__item {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 1.5rem;
   font-family: 'my-roboto';
   font-weight: 300; }
@@ -879,7 +889,7 @@
 
 .pages-other__title {
   color: #60427D;
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-transform: uppercase; }
 
 .pages-other__body {
@@ -999,6 +1009,16 @@
         display: none; }
         .service--main:nth-child(-n + 10) {
           display: inline-block; } }
+
+.services-inner__content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .services-inner__content ul li {
+    font-size: 1.3rem;
+    font-family: 'my-roboto';
+    font-weight: 300;
+    margin-bottom: 1rem; }
 
 .services__container {
   width: 100%;
