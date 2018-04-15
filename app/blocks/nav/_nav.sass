@@ -11,6 +11,7 @@
 
   &__item
     margin-right: 6.3125rem
+    position: relative
     &:last-child
       margin-right: 0
 
@@ -20,6 +21,10 @@
     font-size: 1.2rem
     font-family: 'my-roboto'
     font-weight: 500
+    &:hover
+      color: lighten($text-color, 30%)
+  &__link:hover ~ .nav__submenu, .nav__submenu:hover
+    display: block
 
   &__submenu
     display: none
@@ -63,7 +68,12 @@
             /* >> Optional styling: */
             display: inline-block
             position: absolute
-            right: 35%
+            right: 25%
             color: $accent
             transition: all 0.5s ease
             /* ... */
+
+  @media screen and (max-width: 768px)
+
+    &__link:hover ~ .nav__submenu, .nav__submenu:hover
+      display: none

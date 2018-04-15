@@ -5,10 +5,11 @@ mixin menu(data)
 				a.footer-nav__link(href=item.href)= item.text
 
 mixin languages(data)
-	ul.languages.languages--mobile
+	span.dropdown-languages__title en
+	ul.languages.languages--mobile.dropdown-languages__languages
 		each lang in data.languages
 			li.languages__item.languages__item--footer
-				a.languages__link(href='javascript:void(0);')= lang
+				a.languages__link(href='#')= lang
 	
 footer.page__footer.footer
 	.footer__container.container
@@ -16,12 +17,13 @@ footer.page__footer.footer
 			.footer__logo-contact
 				.footer__logo
 					.logo
-						img.picture.picture--full.logo__picture(src='img/logo-white.png')
+						img.picture.logo__picture.picture--logo(src='img/logo-white.png')
 					.description.description--footer
 						h1.description__title ТОРГОВО-ПРОМИСЛОВА ПАЛАТА УКРАЇНИ
 						span.description__manufacturer Представництво в Італії
 						span.description__detaile (Ломбардія, П’ємонт)
-				+languages({'languages': ['ua','it','en']})
+				#dropdown-languages.dropdown-languages
+					+languages({'languages': ['ua','it','en']})
 			.footer__nav-social
 				.footer-nav
 					.footer-nav__title Розділи

@@ -3,6 +3,11 @@
   background-color: $accent
   margin: 0 5%
   list-style: none
+  position: absolute
+  z-index: 1
+  left: 0
+  min-width: 15rem
+  padding: 0.2rem 0.5rem
 
   &__item
     padding: 5px 0
@@ -10,3 +15,9 @@
   &__link
     color: #fff
     text-decoration: none
+    &:hover
+      color: darken(#fff, 30%)
+
+  @media screen and (max-width: 768px)
+    position: relative
+    padding: 0
