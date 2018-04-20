@@ -18,13 +18,11 @@ footer.page__footer.footer
 			.footer__logo-contact
 				.footer__logo
 					.logo
-						img.picture.picture--full.logo__picture.picture--logo(src='img/logo-white.png')
+						img.picture.logo__picture.picture--logo(src='img/logo-white.png')
 					.description.description--footer
 						h1.description__title ТОРГОВО-ПРОМИСЛОВА ПАЛАТА УКРАЇНИ
 						span.description__manufacturer Представництво в Італії
 						span.description__detaile (Ломбардія, П’ємонт)
-				#dropdown-languages.dropdown-languages
-					+languages({'languages': ['ua','it','en']})
 			.footer__nav-social
 				.footer-nav
 					.footer-nav__title Розділи
@@ -44,6 +42,8 @@ footer.page__footer.footer
 				.footer__socials
 					a(href="facebook.com") 
 						i.fab.fa-facebook-square
+					#dropdown-languages.dropdown-languages
+						+languages({'languages': ['ua','it','en']})
 			.footer__map#map.footer__map--contacts
 			address.footer__address.address.footer__address--contacts
 				span.address__item Viale Certosa 138, Milano (MI), Italia, 20156
