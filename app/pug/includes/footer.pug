@@ -1,15 +1,21 @@
+mixin languages(data)
+	ul.languages.languages--mobile
+		for item, path in data
+			li.languages__item(class= item == 'active' ? 'languages__item--active' : '')
+				a.languages__link(href='javascript:void(0);')= path
+
 mixin menu(data)
 	ul.footer-nav__list
 		each item in data.menu
 			li.footer-nav__item
 				a.footer-nav__link(href=item.href)= item.text
 
-mixin languages(data)
-	span.dropdown-languages__title en
-	ul.languages.languages--mobile.dropdown-languages__languages
-		each lang in data.languages
-			li.languages__item.languages__item--footer
-				a.languages__link(href='#')= lang
+//- mixin languages(data)
+//- 	span.dropdown-languages__title en
+//- 	ul.languages.languages--mobile.dropdown-languages__languages
+//- 		each lang in data.languages
+//- 			li.languages__item.languages__item--footer
+//- 				a.languages__link(href='#')= lang
 	
 footer.page__footer.footer
 	.footer__container.container
@@ -39,17 +45,18 @@ footer.page__footer.footer
 						'text': 'Контакти'		
 					}]})
 				.footer__socials
+					+languages({'ua' : 'active','it' : 'no','en' : 'no'})
+					//- #dropdown-languages.dropdown-languages
+					//- 	+languages({'languages': ['ua','it','en']})
 					a(href="facebook.com") 
 						i.fab.fa-facebook-square
-					#dropdown-languages.dropdown-languages
-						+languages({'languages': ['ua','it','en']})
 			.footer__map#map
 			address.footer__address.address
 				span.address__item Viale Certosa 138, Milano (MI), Italia, 20156
 				span.address__item tel Italia: 
-					a.number.number--white(href="tel:393319899647") +39 (331) 989 96 47
+					a.number.number--white.number--thin(href="tel:393319899647") +39 (331) 989 96 47
 				span.address__item tel Ukraine: 
-					a.number.number--white(href="tel:393319899647") +39 (331) 989 96 47
+					a.number.number--white.number--thin(href="tel:393319899647") +39 (331) 989 96 47
 				a.address__item(href="mailto:info@ucci-studio.it") info@ucci-studio.it
 		.footer__creator.creator 	&#169; Designed by  
 			a.creator__link(href="javascript:void(0);")  Jul Mas studio

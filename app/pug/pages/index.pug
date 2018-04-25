@@ -3,7 +3,10 @@ extends ../layouts/layout.pug
 mixin title(data)
 	.title
 		h2.title__text= data
-		a.title__more(href="javascript:void(0);") ...
+		.title__more(href="javascript:void(0);")
+			span
+			span
+			span
 
 mixin slider(data)
 	a.slider__item(href='#')

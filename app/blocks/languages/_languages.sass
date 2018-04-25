@@ -11,6 +11,12 @@
       margin-right: 0
       margin-bottom: 0.625rem
 
+    &--active
+      .languages__link
+        background-color: $accent
+        &:hover
+          color: #fff
+
   &__link
     width: 30px
     height: 30px
@@ -30,6 +36,23 @@
 
   &--mobile
     display: flex
-    flex-direction: column
     padding: 0
     display: none
+
+
+  @media screen and(max-width: 768px)
+    display: flex
+
+    &__link
+      background-color: #fff
+      color: $accent
+      width: 20px
+      height: 20px
+      font-size: 0.625rem
+      line-height: 20px
+    &__item
+      &--active
+        .languages__link
+          color: #fff
+          &:hover
+            color: #fff

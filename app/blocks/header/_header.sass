@@ -48,6 +48,9 @@
     display: none
     box-shadow: 0 0 4px #333
 
+  &__icons--mobile
+    display: none
+
   @media screen and (max-width: 768px)
     display: flex
     flex-direction: column
@@ -82,12 +85,21 @@
     &__burger
       flex: 2
 
-    &__mobile
+    &__mobile,
       display: flex
       justify-content: space-between
       align-items: center
       padding-right: 15px
       flex: 1
+
+    &__icons--mobile
+      display: flex
+      padding-top: 2rem
+      padding-bottom: 0.5rem
+      justify-content: center
+
+    &__languages
+      padding: 0
 
     &__address
       font-size: 1rem

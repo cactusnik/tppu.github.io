@@ -1,8 +1,8 @@
 mixin languages(data)
 	ul.languages.header__languages
-		each lang in data.languages
-			li.languages__item
-				a.languages__link(href='javascript:void(0);')= lang
+		for item, path in data
+			li.languages__item(class= item == 'active' ? 'languages__item--active' : '')
+				a.languages__link(href='javascript:void(0);')= path
 			
 mixin main-menu-submenu(data)
 	ul.nav__submenu.submenu&attributes(attributes)
@@ -37,10 +37,10 @@ header.page__header.header
 				.header__socials
 					a.social(href="facebook.com") 
 						i.fab.fa-facebook-f
-				+languages({'languages': ['ua','it','en']})
+				+languages({'ua' : 'active','it' : 'no','en' : 'no'})
 			.header__contact
 				.header__numbers
-					a.number(href="tel:393319899647") +39 (331) 989 96 47
+					a.number.number--decor(href="tel:393319899647") +39 (331) 989 96 47
 					a.number(href="tel:393319899647") +39 (331) 989 96 47
 				span.header__address Viale Certosa 138, Milano (MI), Italia, 20156
 	.header__mobile
@@ -101,3 +101,5 @@ header.page__header.header
 						
 					]
 				})
+		.header__icons--mobile
+			+languages({'ua' : 'active','it' : 'no','en' : 'no'})
