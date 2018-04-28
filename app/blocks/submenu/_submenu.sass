@@ -6,13 +6,26 @@
   position: absolute
   z-index: 1
   padding: 1rem
-  min-width: 100%
   grid-auto-columns: 175px
   grid-template-rows: auto auto auto auto auto
   grid-auto-flow: column
 
   &__item
     padding: 5px 0
+    &:nth-child(6n)
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        right: 2rem
+        left: 0
+        bottom: 0
+        margin:  auto
+        display: block
+        width: 1px
+        height: 80%
+        background-color: white
+
 
   &__link
     color: #fff

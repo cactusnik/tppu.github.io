@@ -1208,12 +1208,23 @@
   position: absolute;
   z-index: 1;
   padding: 1rem;
-  min-width: 100%;
   grid-auto-columns: 175px;
   grid-template-rows: auto auto auto auto auto;
   grid-auto-flow: column; }
   .submenu__item {
     padding: 5px 0; }
+    .submenu__item:nth-child(6n):after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 2rem;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      display: block;
+      width: 1px;
+      height: 80%;
+      background-color: white; }
   .submenu__link {
     color: #fff;
     text-decoration: none;
