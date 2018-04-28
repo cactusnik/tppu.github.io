@@ -1,13 +1,15 @@
 .submenu
   padding: 0
   background-color: $accent
-  margin: 0 5%
+  margin: 0
   list-style: none
   position: absolute
   z-index: 1
-  left: 0
-  min-width: 15rem
-  padding: 0.2rem 0.5rem
+  padding: 1rem
+  min-width: 100%
+  grid-auto-columns: 175px
+  grid-template-rows: auto auto auto auto auto
+  grid-auto-flow: column
 
   &__item
     padding: 5px 0
@@ -15,9 +17,15 @@
   &__link
     color: #fff
     text-decoration: none
+    font-size: 0.75rem
     &:hover
       color: darken(#fff, 30%)
 
   @media screen and (max-width: 768px)
     position: relative
     padding: 0
+    margin: 0 5%
+    min-width: auto
+
+    &__link
+      font-size: inherit

@@ -763,20 +763,23 @@
             align-items: center;
     height: 100%; }
   .nav__item {
-    margin-right: 6.3125rem;
     position: relative; }
     .nav__item:last-child {
       margin-right: 0; }
   .nav__link {
+    display: inline-block;
     color: #4D4D4D;
     text-decoration: none;
     font-size: 1.2rem;
     font-family: 'my-roboto';
-    font-weight: 500; }
+    font-weight: 500;
+    line-height: 3.1875rem;
+    padding: 0 calc(6.3125rem / 2); }
     .nav__link:hover {
-      color: #9a9a9a; }
+      background-color: #60427D;
+      color: #fff; }
   .nav__link:hover ~ .nav__submenu, .nav .nav__submenu:hover {
-    display: block; }
+    display: grid; }
   .nav__submenu {
     display: none; }
   @media screen and (max-width: 768px) {
@@ -793,16 +796,22 @@
       .nav__link {
         display: block;
         padding: 5px 0;
-        position: relative; }
+        position: relative;
+        line-height: inherit; }
+        .nav__link:hover {
+          background-color: inherit;
+          color: inherit; }
       .nav__item {
         margin-right: 0;
         border-bottom: 1px solid #bdbdbd;
         text-align: center; }
         .nav__item:first-child {
           border-top: 1px solid #bdbdbd; }
-        .nav__item--active.nav__link:after {
-          -webkit-transform: rotate(90deg);
-                  transform: rotate(90deg); }
+        .nav__item--active.nav__link {
+          background-color: inherit; }
+          .nav__item--active.nav__link:after {
+            -webkit-transform: rotate(90deg);
+                    transform: rotate(90deg); }
         .nav__item--dropdown .nav__link:after {
           /* >> Symbol you want to use: */
           content: "\f056";
@@ -1194,24 +1203,31 @@
 .submenu {
   padding: 0;
   background-color: #60427D;
-  margin: 0 5%;
+  margin: 0;
   list-style: none;
   position: absolute;
   z-index: 1;
-  left: 0;
-  min-width: 15rem;
-  padding: 0.2rem 0.5rem; }
+  padding: 1rem;
+  min-width: 100%;
+  grid-auto-columns: 175px;
+  grid-template-rows: auto auto auto auto auto;
+  grid-auto-flow: column; }
   .submenu__item {
     padding: 5px 0; }
   .submenu__link {
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 0.75rem; }
     .submenu__link:hover {
       color: #b3b3b3; }
   @media screen and (max-width: 768px) {
     .submenu {
       position: relative;
-      padding: 0; } }
+      padding: 0;
+      margin: 0 5%;
+      min-width: auto; }
+      .submenu__link {
+        font-size: inherit; } }
 
 .title {
   display: -webkit-box;

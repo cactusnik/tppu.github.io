@@ -1,5 +1,6 @@
 .nav
   height: 3.1875rem
+
   &__list
     list-style: none
     margin: 0
@@ -10,24 +11,28 @@
     height: 100%
 
   &__item
-    margin-right: 6.3125rem
     position: relative
     &:last-child
       margin-right: 0
 
   &__link
+    display: inline-block
     color: $text-color
     text-decoration: none
     font-size: 1.2rem
     font-family: 'my-roboto'
     font-weight: 500
+    line-height: 3.1875rem
+    padding: 0 calc(6.3125rem / 2)
     &:hover
-      color: lighten($text-color, 30%)
+      background-color: $accent
+      color: #fff
   &__link:hover ~ .nav__submenu, .nav__submenu:hover
-    display: block
+    display: grid
 
   &__submenu
     display: none
+
 
   @media screen and (max-width: 768px)
     height: auto
@@ -39,6 +44,10 @@
       display: block
       padding: 5px 0
       position: relative
+      line-height: inherit
+      &:hover
+        background-color: inherit
+        color: inherit
 
     &__item
       margin-right: 0
@@ -48,6 +57,7 @@
         border-top: 1px solid #bdbdbd
 
       &--active.nav__link
+        background-color: inherit
         &:after
           transform: rotate(90deg)
       &--dropdown
