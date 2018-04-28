@@ -1,30 +1,31 @@
 .submenu
+  border-top: 1px solid #fff
   padding: 0
   background-color: $accent
   margin: 0
   list-style: none
   position: absolute
+  padding: 1rem 0
   z-index: 1
-  padding: 1rem
   grid-auto-columns: 175px
   grid-template-rows: auto auto auto auto auto
   grid-auto-flow: column
 
   &__item
-    padding: 5px 0
-    &:nth-child(6n)
-      &:after
-        content: ''
-        position: absolute
-        top: 0
-        right: 2rem
-        left: 0
-        bottom: 0
-        margin:  auto
-        display: block
-        width: 1px
-        height: 80%
-        background-color: white
+    padding: 5px 1rem
+    &:nth-child(n + 6)
+      border-left: 1px solid white
+    // &:nth-child(6n)
+    //   &:after
+    //     content: ''
+    //     position: absolute
+    //     top: 0
+    //     bottom: 0
+    //     margin: auto 0
+    //     display: block
+    //     width: 1px
+    //     height: 80%
+    //     background-color: white
 
 
   &__link
