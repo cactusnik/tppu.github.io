@@ -14,6 +14,15 @@
     position: relative
     &:last-child
       margin-right: 0
+    &:hover
+      .nav__link
+        background-color: $accent
+        color: #ffffff
+    @media screen and (max-width: 768px)
+      &:hover
+        .nav__link
+          background-color: inherit
+          color: inherit
 
   &__link
     display: inline-block
@@ -29,6 +38,7 @@
       color: #fff
   &__link:hover ~ .nav__submenu, .nav__submenu:hover
     display: grid
+
 
   &__submenu
     display: none

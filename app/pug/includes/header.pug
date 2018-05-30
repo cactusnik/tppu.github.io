@@ -16,8 +16,8 @@ mixin main-menu(data)
 			each item in data.menu
 				- var itemClasses = ['nav__item']
 				//- Доп класс для пунктов с подменю
-				if (item.submenu !== false)
-					- itemClasses.push(itemClasses[0] + '--dropdown')
+				//if (item.submenu !== false)
+				//	- itemClasses.push(itemClasses[0] + '--dropdown')
 				li(class=itemClasses)
 					a.nav__link(href=item.url)= item.title
 					if (item.submenu !== false)
