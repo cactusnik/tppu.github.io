@@ -1,5 +1,5 @@
-window.onload=function(){
-var menuElem = document.getElementById('dropdown-languages'),
+/*window.onload=function(){
+    var menuElem = document.getElementById('dropdown-languages'),
     titleElem = menuElem.querySelector('.dropdown-languages__title');
     document.onclick = function(event) {
     var target = elem = event.target;
@@ -16,4 +16,4 @@ var menuElem = document.getElementById('dropdown-languages'),
       }
     //menuElem.classList.remove('open');
 }
-}
+}*/
