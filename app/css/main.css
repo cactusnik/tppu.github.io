@@ -242,6 +242,85 @@
           -ms-flex-pack: center;
               justify-content: center; } }
 
+.event {
+  position: relative;
+  display: block;
+  margin-bottom: 70px; }
+  .event:after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    width: 40%;
+    height: 1px;
+    margin: auto;
+    background-color: #000; }
+  .event__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 25px;
+    font-family: 'my-roboto';
+    font-weight: 400; }
+  .event .event__subtitle {
+    font-style: 15px; }
+  .event .event__title {
+    font-size: 19px;
+    margin: 5px 0;
+    font-family: 'my-roboto';
+    font-weight: 600;
+    text-transform: uppercase; }
+  .event .event__locate {
+    font-family: 'my-roboto';
+    font-weight: 300;
+    font-style: italic; }
+  .event .event__data {
+    font-family: 'my-roboto';
+    font-weight: 500;
+    font-style: italic; }
+  .event .event__more {
+    color: #60427D;
+    font-family: 'my-roboto';
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase; }
+  .event .event__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style: none; }
+  .event .event__item {
+    font-family: 'my-roboto';
+    font-weight: 300;
+    font-size: 15px; }
+  .event .event__contacts {
+    font-family: 'my-roboto';
+    font-weight: 300;
+    font-size: 13px; }
+  .event .event__picture {
+    width: 100%;
+    height: 365px; }
+    .event .event__picture .picture {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
+
 .footer-nav__title {
   color: #fff;
   font-size: 1.6rem;

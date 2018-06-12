@@ -5,25 +5,26 @@ block breadcrumbs
 
 mixin event(data)
   article.event
-    span.event__title= data.title
-    h3.event__subtitle= data.subtitle 
-    time.event__data(datetime=data.time)= data.time
-    span.event__locate= data.locate
-    h3.event__name= data.name
-    span.enent__organizes= data.organizes
-    if(data.list != underfined)
-      ul.event__list
-        each item in data.list
-          li.event__item= item
-    a.event__more(href='javascript:void(0)') деталі з питань участі за телефоном
-    if(data.contact != underfined)
-      each item in data.contact
-        span.event__contacts= item
+    .event__content
+      span.event__subtitle= data.title
+      h3.event__title= data.subtitle 
+      time.event__data(datetime=data.time)= data.time
+      span.event__locate= data.locate
+      h3.event__name= data.name
+      span.enent__organizes= data.organizes
+      if(data.list != underfined)
+        ul.event__list
+          each item in data.list
+            li.event__item= item
+      a.event__more(href='javascript:void(0)') деталі з питань участі за телефоном
+      if(data.contact != underfined)
+        each item in data.contact
+          span.event__contacts= item
     .event__picture
       img.picture(src=data.src, alt=data.title)
 
 block page-contact
-  .pages-other.event
+  .pages-other.events
     .pages-other__container.container
       h2.pages-other__title МІЖНАРОДНІ ВИСТАВКИ
       .pages-other__body
