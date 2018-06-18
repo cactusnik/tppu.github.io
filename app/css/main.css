@@ -967,6 +967,21 @@
 .news-inner__content p, .news-inner__data {
   font-weight: 300; }
 
+@media screen and (max-width: 992px) {
+  .news-inner__header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .news-inner__info, .news-inner__picture {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%; }
+  .news-inner__info {
+    padding: 0; }
+  .news-inner__picture {
+    top: 0;
+    left: 0; } }
+
 .news {
   background-color: #E6E6E6;
   padding: 10px;
