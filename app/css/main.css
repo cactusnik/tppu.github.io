@@ -271,7 +271,9 @@
     font-family: 'my-roboto';
     font-weight: 400; }
   .event .event__subtitle {
-    font-style: 15px; }
+    font-size: 15px;
+    font-family: 'my-roboto';
+    font-weight: 300; }
   .event .event__title {
     font-size: 19px;
     margin: 5px 0;
@@ -320,6 +322,21 @@
       height: 100%;
       -o-object-fit: cover;
          object-fit: cover; }
+  @media screen and (max-width: 768px) {
+    .event {
+      margin-bottom: 35px; }
+      .event:after {
+        bottom: -10px;
+        width: 90%;
+        background-color: #E6E6E6; }
+      .event .event__content {
+        text-align: center; }
+      .event .event__picture {
+        height: 175px; }
+      .event .event__list {
+        padding-left: 0; }
+      .event .event__more {
+        margin-bottom: 15px; } }
 
 .footer-nav__title {
   color: #fff;
